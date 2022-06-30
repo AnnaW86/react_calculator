@@ -74,14 +74,8 @@ function App() {
     setRunningTotal(parseFloat(previousTotal) * parseFloat(number));
   }
 
-  const divide = (number) => {
-    if (number === 0) {
-      setRunningTotal("error - cannot divide by 0");
-    } else {
-      (setRunningTotal(parseFloat(previousTotal) / parseFloat(number)));
+  const divide = (number) => number === 0 ? setRunningTotal("error - cannot divide by 0") : (setRunningTotal(parseFloat(previousTotal) / parseFloat(number)));
 
-    }
-  }
 
 
   return (
